@@ -1,6 +1,16 @@
-def main():
-    print("Hello from ai-learning!")
+from anthropic import Anthropic
+from dotenv import load_dotenv
 
+load_dotenv()
 
-if __name__ == "__main__":
-    main()
+client = Anthropic()
+
+message = client.messages.create(
+    model="claude-haiku-4-5-20251001",
+    max_tokens=1024,
+    messages=[
+        {"role": "user", "content": "こんにちは！簡単に自己紹介してください。"}
+    ]
+)
+
+print(message.content[0].text)
