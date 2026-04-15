@@ -8,6 +8,10 @@ dependencies = [
     "anthropic>=0.94.1",
     "langchain>=1.2.15",
     "langchain-anthropic>=1.4.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-huggingface>=1.2.1",
+    "langchain-openai>=1.1.13",
     "openai>=2.31.0",
     "python-dotenv>=1.2.2",
+    "sentence-transformers>=5.4.1",
 ]
